@@ -6,21 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Datecalc</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css">
     <script type="module" src="src/main.js"></script>
 </head>
 <body>
-    <form id="datecalc">
-        <h3>Калкулятор дат</h3>
-        <label>
-            <strong>Первая дата:</strong>
-            <input type="date" name="firstDate">
-        </label>
-        <label>
-            <strong>Вторая дата:</strong>
-            <input type="date" name="secondDate">
-        </label>
-        <button type="submit">Рассчитать промежуток</button>
-        <p id="datecalc_result"></p>
-    </form>
+    <details open id="app_calculate">
+        <summary>Калькулятор</summary>
+        <form id="datecalc">
+            <h3>Калкулятор дат</h3>
+            <label>
+                <strong>Первая дата:</strong>
+                <input type="date" name="firstDate">
+            </label>
+            <label>
+                <strong>Вторая дата:</strong>
+                <input type="date" name="secondDate">
+            </label>
+            <button type="submit">Рассчитать промежуток</button>
+            <p id="datecalc_result"></p>
+        </form>
+    </details>
+    <details id="app_timer">
+        <summary>Таймер</summary>
+        <div class="timer_wrap">
+            <!-- Задание 1.c: 
+                Включите в таймер поле для установки времени и кнопки «Старт», «Стоп». -->
+            <div>
+                <label>
+                    <strong>Введите время в минутах</strong>
+                    <input value="1" id="timer_value" type="number" min="1" max="999">
+                </label>
+                <span id="timer_seconds"></span>
+            </div>
+            <div>
+                <button id="timer_start">Старт</button>
+                <button id="timer_stop">Стоп</button>
+            </div>
+        </div>
+    </details>
 </body>
 </html>
