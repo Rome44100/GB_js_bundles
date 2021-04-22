@@ -4,8 +4,9 @@
 // Реализуйте таймер. 
 // Включите в него общую кодовую базу с калькулятором дат, реализованным в этом уроке.
 // Не понял зачем нужна кодовая база от дат в таймере... Раз надо, значит надо. :)
-import * as datecalc from "./datecalc.js";
+//import * as datecalc from "./datecalc.js";
 
+// Задание 1.е. и 1.ф.
 // Не работает. Error: Uncaught SyntaxError: import not found: Howler
 //import { Howl, Howler } from "./howler.js";
 
