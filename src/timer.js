@@ -19,8 +19,10 @@ function playTimer() {
 
         let intervalId = null;
 
-        timer_start.addEventListener("click", () => {
+        timer_start.addEventListener("click", (e) => {
             const timer_value = document.getElementById("timer_value");
+
+            e.target.style.visibility = "hidden";
 
             let countSeconds = timer_value.value * 60;
 
@@ -43,6 +45,7 @@ function playTimer() {
 
         timer_stop.addEventListener("click", () => {
             clearInterval(intervalId);
+            document.getElementById("timer_start").style.visibility = "visible";
         });
     } else {
         // попросить число
